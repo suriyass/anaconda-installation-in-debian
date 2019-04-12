@@ -1,0 +1,44 @@
+step1 :open terminal
+step2 :must have sudo permission
+step3 :$ cd /tmp
+step4 :$ curl -O https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+                                                                     /* NOTE:
+                                                                     If error occurs wuth curl just type: pip install curl
+                                                                     */
+step5 :$ sha256sum Anaconda3-5.2.0-Linux-x86_64.sh
+                                                                      /*NOTE:
+                                                                      output should be like :
+                                                                      09f53738b0cd3bb96f5b1bac488e5528df9906be2480fe61df40e0e0d19e3d48  Anaconda3-5.2.0-Linux-x86_64.sh
+                                                                      */
+step6 :$ bash Anaconda3-5.2.0-Linux-x86_64.sh
+                                                                      /* NOTE:
+                                                                      Output
+
+                                                                      Welcome to Anaconda3 5.2.0
+
+                                                                      In order to continue the installation process, please review the license
+                                                                      agreement.
+                                                                      Please, press ENTER to continue
+                                                                      >>>
+                                                                      */
+Step7   : press enter
+step8   : Type yes
+Step9   : press enter
+step10  : press enter
+step 11 : $ source ~/.bashrc
+step 12 : $ conda list
+ 
+                                                                      /*NOTE: "output"
+                                                                     # packages in environment at /home/sammy/anaconda3:
+                                                                      # Name                    Version                   Build  Channel
+                                                                      _ipyw_jlab_nb_ext_conf    0.1.0            py36he11e457_0  
+                                                                      alabaster                 0.7.10           py36h306e16b_0  
+                                                                      anaconda                  5.2.0                    py36_3  
+                                                                      ...
+                                                                      */
+step 13 : $ conda search "^python$"
+step 14 : $ conda create --name my_env python=3
+step 15 : $ source activate my_env
+step 16 : $ conda create -n my_env35 python=3.5
+step 17 : $ conda update python
+
